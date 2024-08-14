@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include "startup.h"
+
 
 int main(){
-    printf("Hellow World");
-    printf("1234");
+    start_menu();
     return 0;
 
 }
