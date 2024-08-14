@@ -2,30 +2,30 @@
 
 void start_menu();
 void start_menu(){
-    printf("-------------------------------------------------------------------------------");
-    printf("-                                                                             -");
-    printf("-                                                                             -");
-    printf("-                                                                             -");
-    printf("-                                                                             -");
-    printf("-                                                                             -");
-    printf("-                                                                             -");
-    printf("-                                                                             -");
-    printf("-                   Start      Game                                           -");
-    printf("-                                                                             -");
-    printf("-                                                                             -");
-    printf("-                                                                             -");
-    printf("-                                                                             -");
-    printf("-                                                                             -");
-    printf("-                                                                             -");
-    printf("-                                                                             -");
-    printf("-                                                                             -");
-    printf("-                                                                             -");
-    printf("-                                                                             -");
-    printf("-                                                                             -");
-    printf("-                                                                             -");
-    printf("-                                                                             -");
-    printf("-                                                                             -");
-    printf("-                                                                             -");
-    printf("-------------------------------------------------------------------------------");
+    printf("-------------------------------------------------------------------------------\n");
+    printf("-                                                                             -\n");
+    printf("-                                                                             -\n");
+    printf("-                                                                             -\n");
+    printf("-                                                                             -\n");
+    printf("-                                                                             -\n");
+    printf("-                                                                             -\n");
+    printf("-                                                                             -\n");
+    printf("-                   Start      Game                                           -\n");
+    printf("-                                                                             -\n");
+    printf("-                                                                             -\n");
+    printf("-                                                                             -\n");
+    printf("-                                                                             -\n");
+    printf("-                                                                             -\n");
+    printf("-                                                                             -\n");
+    printf("-                                                                             -\n");
+    printf("-                                                                             -\n");
+    printf("-                                                                             -\n");
+    printf("-                                                                             -\n");
+    printf("-                                                                             -\n");
+    printf("-                                                                             -\n");
+    printf("-                                                                             -\n");
+    printf("-                                                                             -\n");
+    printf("-                                                                             -\n");
+    printf("-------------------------------------------------------------------------------\n");
 
 }
