@@ -1,4 +1,6 @@
-#include "hitpointype.h"
+#pragma once
+
+typedef std::int16_t hptype;
 
 class hp{
 public:
@@ -7,35 +9,53 @@ public:
         if(new_max_hp < 1)
             return false;
 
-        MaxHp = new_max_hp;
+        MaxHP = new_max_hp;
 
-        if(CurrentHP>MaxHp)
-            CurrentHP=MaxHp;
+        if(CurrentHP > MaxHP)
+            CurrentHP = MaxHP;
         
         return true;
     }
+    
+    hptype getMaxHp(){
+        return MaxHP;
+    }
+
+    hptype getCurrentHP(){
+        return CurrentHP;
+    }
 
     void takeDamage(hptype damage){
-        if(damage>CurrentHP+ShieldHP){
-            CurrentHP=0;
+        if(damage > CurrentHP){
+            CurrentHP = 0;
             return;
         }
-        if(ShieldHP>damage)
-            ShieldHP -= damage;
     
-    CurrentHP -= damage;    
+        CurrentHP -= damage;    
     }
 
     void heal(hptype amount){
-        if(amount+CurrentHP>MaxHp){
-            CurrentHP = MaxHp;
+        if(amount+CurrentHP>MaxHP){
+            CurrentHP = MaxHP;
             return;
         }
 
         CurrentHP += amount;
     }
+
+    hp(){
+        CurrentHP = 1;
+        MaxHP = 1;
+    }
+
+    hp(hptype cHP, hptype mHP){
+        CurrentHP = cHP;
+        MaxHP = mHP;
+        if(CurrentHP > MaxHP)
+            CurrentHP = MaxHP;
+    }
+
 private:
-    hptype ShieldHP;
     hptype CurrentHP;
-    hptype MaxHp;
+    hptype MaxHP;
 };
