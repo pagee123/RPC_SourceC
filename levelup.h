@@ -5,11 +5,13 @@ typedef std::uint16_t leveltype;
 
 class LevelSystem{
     public:
-        static const 
+    static const exptype LEVEL2AT = 100u;
 
         LevelSystem() {
             CurrentLevel = 1u;
-            CurrentEXP = 0u;    
+            CurrentEXP = 0u;   
+            LevelUpsAvalible = 0u; 
+            LevelUpsAvalible = LEVEL2AT;
         }
         void gainEXP(exptype gained_exp){
             CurrentEXP += gained_exp;
@@ -17,10 +19,17 @@ class LevelSystem{
         }
     protected:
         leveltype CurrentLevel;
-        leveltype LevelupsAvalible;
+        leveltype LevelUpsAvalible;
         exptype CurrentEXP; 
+        exptype EXPToNextLevel;
 
         void check_if_leveled(){
-            leveltype Curren_equivent_level = CurrentLevel + LevelupsAvalible;
-        } 
+            if(CurrentEXP < EXPToNextLevel){
+                CurrentLevel++;
+                LevelUpsAvalible++;
+                            
+            }
+                
+                static const leveltype LEVELSCALAR = 2u;
+            } 
 };
