@@ -20,4 +20,10 @@ public:
 
     stattype getStrenth(){return Strength;}
     stattype getIntellect(){return Intellect;}
+
+protected:
+    void increaseStats(stattype s, stattype i ) {
+        Strength += s;
+        Intellect += i;
+    }
 };
