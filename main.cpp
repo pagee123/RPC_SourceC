@@ -1,5 +1,6 @@
 #include <iostream>
-#include "allclasses.h"
+#include "playercharacter.h"
+//#include "allclasses.h"
 
 int main(){
     Warrior warr1;
@@ -55,6 +56,12 @@ int main(){
     //     if (i < 1)
     //         rog1.gainEXP(100u);
     // }
+
+
+    //---------PlayerCharacter----
+
+    PlayerCharacter p1(new Rogue());
+
 
     system("pause");
     return 0;

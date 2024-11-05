@@ -3,11 +3,11 @@
 typedef std::uint64_t exptype;
 typedef std::uint16_t leveltype;
 
-class LevelSystem{
+class PlayerCharacterDelegate{
     public:
     static const exptype LEVEL2AT = 100u;
 
-        LevelSystem() {
+        PlayerCharacterDelegate() {
             CurrentLevel = 1u;
             CurrentEXP = 0u;   
             EXPToNextLevel = LEVEL2AT;
@@ -48,4 +48,27 @@ class LevelSystem{
             return false;
         }  
 
+};
+
+class Cleric : public PlayerCharacterDelegate {
+
+public:
+    static const hptype BASEHP = (hptype)14u;    
+    static const stattype BASESTR = (stattype)2u;
+    static const stattype BASEINT = (stattype)3u;
+
+    static const hptype HPGROWTH = (hptype)7u;    
+    static const stattype STRGROWTH = (stattype)1u;
+    static const stattype INTGROWTH = (stattype)2u;
+
+    
+    Cleric() : hp(BASEHP, BASEHP), StatBlock(BASESTR,BASEINT) {}
+
+    
+
+private:
+    void LevelUp() override{
+        setMaxHP(HPGROWTH + getMaxHp());
+        increaseStats(STRGROWTH, INTGROWTH);
+    }
 };
