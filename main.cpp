@@ -3,11 +3,6 @@
 //#include "allclasses.h"
 
 int main(){
-    Warrior warr1;
-    Wizard wiz1;
-    Cleric cler1;
-    Rogue rog1;
-
 
     //---------Test by classes
     // std::cout << "Warrior\n" 
@@ -60,7 +55,19 @@ int main(){
 
     //---------PlayerCharacter----
 
-    PlayerCharacter p1(new Rogue());
+    PlayerCharacter p1(new Berserker());
+
+    for(int i = 0;i < 2; i++){
+        std::cout 
+            << p1.getClassName()
+            << " Level: " << p1.getLevel() << '\n'
+            << "-EXP: " << p1.getCurrentEXP() << "/" << p1.getEXPToNextLevel() << '\n'
+            << "-HP: " << p1.getCurrentHP() << "/" << p1.getMaxHP() << '\n'
+            << "-Strength: " << p1.getStrength() << '\n'
+            << "-Intellect: " << p1.getIntellect() << '\n';
+        if (i < 1)
+            p1.gainEXP(100u);
+    }
 
 
     system("pause");
