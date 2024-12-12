@@ -55,7 +55,7 @@ int main(){
 
     //---------PlayerCharacter----
 
-    PlayerCharacter p1(new Berserker());
+    PlayerCharacter p1(new Wizard());
 
     for(int i = 0;i < 2; i++){
         std::cout 
@@ -64,7 +64,10 @@ int main(){
             << "-EXP: " << p1.getCurrentEXP() << "/" << p1.getEXPToNextLevel() << '\n'
             << "-HP: " << p1.getCurrentHP() << "/" << p1.getMaxHP() << '\n'
             << "-Strength: " << p1.getStrength() << '\n'
-            << "-Intellect: " << p1.getIntellect() << '\n';
+            << "-Intellect: " << p1.getIntellect() << '\n'
+            << "-Agility: " << p1.getAgility() << '\n'
+            << "-Armor: " << p1.getArmor() << '\n'
+            << "-Resist: " << p1.getElementRes() << '\n';
         if (i < 1)
             p1.gainEXP(100u);
     }
